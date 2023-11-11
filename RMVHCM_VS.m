@@ -1,5 +1,5 @@
 clear,clc;
-%% IS
+% IS
 % Data = load('IS.txt');  Y = Data(:,end); Data(:,end) = [];
 % Data = mapminmax(Data',0,1); Data = Data';
 % view = 2; features = [9 10];
