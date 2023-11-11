@@ -188,28 +188,9 @@ for alpha_i =1:16
         result_label=label_map(label,truelabel{1});
         Y=truelabel{1};
         AC1(time) = length(find(Y == result_label))/length(Y);
-        nmi(time) = NMI(Y,result_label);    
-        [P(time),R1(time),F(time),RI(time),FM(time),J(time)] = Evaluate(Y,result_label);
     end
     meanAC=mean(AC1);
-    meanNMI=mean(nmi);
-    meanP=mean(P);
-    meanR1=mean(R1);
-    meanF=mean(F);
-    meanRI=mean(RI);
-    meanFM=mean(FM);
-    meanJ=mean(J);
     stdAC=std(AC1);
-    stdNMI= std(nmi);
-    stdP= std(P);
-    stdR1= std(R1);
-    stdF= std(F);
-    stdRI= std(RI);
-    stdFM= std(FM);
-    stdJ= std(J);
-    metrics = [metrics;[alpha,meanAC,meanNMI,meanP,meanR1,meanF,meanRI,meanFM,meanJ]];
-    fprintf("ACC:%f,NMI:%f,P:%f,R:%f,F:%f,RI:%f,FM:%f,J:%f\n",meanAC,meanNMI,meanP,meanR1,meanF,meanRI,meanFM,meanJ);
-    stdmetrics = [stdmetrics;[alpha,stdAC,stdNMI,stdP,stdR1,stdF,stdRI,stdFM,stdJ]];
 end
 
 
